@@ -29,6 +29,7 @@ export class SendDocumentComponent implements OnInit {
       console.warn('Fill required fields');
     } else {
       this.showLoading = true;
+      // Set the proper bounds value to each form field based on the uploaded file whatever you want.
       let signerData = {
         "name": this.userForm.value.name,
         "emailAddress": this.userForm.value.email,

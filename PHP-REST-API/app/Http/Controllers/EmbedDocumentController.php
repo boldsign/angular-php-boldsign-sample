@@ -56,6 +56,6 @@ class EmbedDocumentController extends Controller
         $request = new \GuzzleHttp\Psr7\Request('POST', $createEmbeddedRequestAPIUrl, $headers);
         $client = new \GuzzleHttp\Client(['verify' => false]);
         $res = $client->sendAsync($request, $options)->wait();
-        return json_encode(json_decode($res->getBody()->getContents())->sendUrl);
+        return $res->getBody()->getContents();
     }
 }

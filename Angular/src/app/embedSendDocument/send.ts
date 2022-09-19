@@ -39,11 +39,13 @@ export class EmbedSendDocument implements OnInit {
       formData.append('Signers', SignerList);
       formData.append('Files', this.selectedFile, this.selectedFile.name);
       this.http.post('/api/document/createEmbeddedRequestUrl', formData)
-      .subscribe(data => {
+      .subscribe((data: any) => {
+        sessionStorage.setItem('documentId', data.documentId);
+        sessionStorage.setItem('status', 'SEND');
         this.userForm.reset();
         this.showLoading = false;
         this.showiframe = true;
-        this.src = this.sanitizer.bypassSecurityTrustResourceUrl(data.toString());
+        this.src = this.sanitizer.bypassSecurityTrustResourceUrl(data.sendUrl.toString());
       });
     }
   }
