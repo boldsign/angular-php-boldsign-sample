@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
 import { RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
+import { EmbedSendDocumentRedirect } from './redirect';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LayoutComponent } from './layout.component';
     EmbedSigningComponent,
     DocumentPropertiesComponent,
     SendDocumentComponent,
-    SendDocumentUsingTemplateComponent
+    SendDocumentUsingTemplateComponent,
+    EmbedSendDocumentRedirect
   ],
   imports: [
     BrowserModule,
