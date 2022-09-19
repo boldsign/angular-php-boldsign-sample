@@ -1,8 +1,6 @@
-# BoldSign API Angular with NodeJS examples
-Demostrates how to use BoldSign signing service. This sample uses Angular as frontend and NodeJS as backend.
+# BoldSign API AngularJS with PHP Rest API examples
+Demostrates how to use BoldSign signing service. This sample uses AngularJS as frontend and PHP as backend.
 
-[![NuGet Version][nuget badge]][nuget link]
-[![NuGet Downloads][nuget downloads badge]][nuget downloads link]
 [![API Demo][api demo badge]][api demo link]
 
 ## Scenarios covered
@@ -27,12 +25,13 @@ This repository includes the below list of code examples using the BoldSign APIs
 ```
 
 5. Now you have all the prerequisites ready to start BoldSign API for Angular.
-6. Check the composer version using this command,
+6. In your machine doesn't have PHP, kindly install from [Download XAMPP PHP](https://www.apachefriends.org/download.html).
+7. Check the composer version using this command,
 ```py
 	composer -V
 ```
-7. In your machine doesn't have composer, kindly install from [Download Composer](https://getcomposer.org/download/).
-8. Now you have all the prerequisites ready to start BoldSign API for PHP.
+8. In your machine doesn't have composer, kindly install from [Download Composer](https://getcomposer.org/download/).
+9. Now you have all the prerequisites ready to start BoldSign API for PHP.
 
 ## Steps to run sample
 
