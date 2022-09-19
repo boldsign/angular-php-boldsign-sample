@@ -34,7 +34,7 @@ class TemplateController extends Controller
                         ->expectsjson()
                         ->send();
 
-        return json_encode($sendResponse->body->sendUrl);
+        return json_encode($sendResponse->body);
     }
 
     public function GetEmbedSigningLink(\Illuminate\Http\Request $request)
@@ -79,7 +79,7 @@ class TemplateController extends Controller
             ];
  
         $documentId = $this->SendTemplateById($sendTemplateDetails, $request['templateId']);
-        return json_encode($documentId );
+        return json_encode($documentId);
     }
 
     private function SendTemplateById($sendTemplateDetails, $templateId)
@@ -110,6 +110,6 @@ class TemplateController extends Controller
             ->expectsjson()
             ->send();
 
-        return json_encode($res->body->signLink);
+        return json_encode(array('documentId' => $documentId, 'signLink' => $res->body->signLink));
     }
 }
